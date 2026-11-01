@@ -4,8 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2b2torg - Eaglercraft Anarchy</title>
-<meta name="description" content="2b2torg is an anarchy survival server for Eaglercraft. No rules, no limits.">
+
+<title>2b2torg - Minecraft Anarchy</title>
+<meta name="description" content="2b2torg - An Eaglercraft anarchy server. No rules, no limits.">
+
+<script src="posts.js"></script>
 
 <style>
 * {
@@ -17,32 +20,32 @@
 body {
     background: #111;
     color: #ddd;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 nav {
     background: #191919;
     border-bottom: 1px solid #333;
-    padding: 18px 8%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 23px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
 }
 
 .logo span {
-    color: #c83232;
+    color: #c52c2c;
 }
 
 nav a {
     color: #aaa;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 22px;
     font-size: 14px;
 }
 
@@ -51,62 +54,59 @@ nav a:hover {
 }
 
 .hero {
-    padding: 110px 20px;
+    background: #181818;
     text-align: center;
-    background: #171717;
+    padding: 110px 20px;
     border-bottom: 1px solid #333;
 }
 
 .hero h1 {
-    font-size: 65px;
+    font-size: clamp(45px, 8vw, 75px);
     color: white;
-    margin-bottom: 15px;
-    letter-spacing: -3px;
+    margin-bottom: 18px;
 }
 
 .hero h1 span {
-    color: #c83232;
+    color: #c52c2c;
 }
 
 .hero p {
     color: #999;
-    font-size: 17px;
-    line-height: 1.7;
-    max-width: 550px;
-    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.join-button {
+.button {
     display: inline-block;
-    margin-top: 30px;
-    padding: 13px 28px;
-    background: #b82b2b;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: #b52b2b;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 3px;
 }
 
-.join-button:hover {
-    background: #922020;
+.button:hover {
+    background: #8f2020;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
     padding: 65px 20px;
 }
 
 h2 {
-    color: white;
     font-size: 27px;
+    color: white;
     margin-bottom: 12px;
 }
 
-.description {
-    color: #999;
-    line-height: 1.7;
+.subtitle {
+    color: #888;
     margin-bottom: 30px;
+    line-height: 1.7;
 }
 
 .server-box {
@@ -116,59 +116,71 @@ h2 {
     border-radius: 4px;
 }
 
-.server-box h3 {
-    color: #999;
-    font-size: 13px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.ip-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
 .ip {
-    color: white;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
+    color: white;
+    margin: 15px 0;
     word-break: break-all;
 }
 
 button {
-    background: #b82b2b;
+    background: #b52b2b;
+    color: white;
     border: none;
     padding: 11px 20px;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
     border-radius: 3px;
 }
 
 button:hover {
-    background: #922020;
+    background: #8f2020;
 }
 
-.features {
+.blog-post {
+    background: #191919;
+    border: 1px solid #333;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.blog-post h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    color: #b52b2b;
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.blog-post p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.feature-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin-top: 25px;
 }
 
 .feature {
     background: #191919;
     border: 1px solid #333;
-    padding: 23px;
-    border-radius: 4px;
+    padding: 25px;
 }
 
 .feature h3 {
     color: white;
-    font-size: 17px;
     margin-bottom: 10px;
 }
 
@@ -178,7 +190,7 @@ button:hover {
     line-height: 1.7;
 }
 
-.about-text {
+.about {
     color: #999;
     line-height: 1.9;
 }
@@ -186,14 +198,14 @@ button:hover {
 footer {
     background: #191919;
     border-top: 1px solid #333;
-    padding: 25px;
     text-align: center;
+    padding: 25px;
     color: #777;
     font-size: 13px;
 }
 
 footer span {
-    color: #c83232;
+    color: #c52c2c;
 }
 
 @media(max-width: 600px) {
@@ -202,21 +214,12 @@ footer span {
     }
 
     nav a {
-        margin-left: 10px;
+        margin-left: 9px;
         font-size: 12px;
     }
 
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .features {
+    .feature-grid {
         grid-template-columns: 1fr;
-    }
-
-    .ip-container {
-        align-items: stretch;
-        flex-direction: column;
     }
 }
 </style>
@@ -229,88 +232,76 @@ footer span {
     <div>
         <a href="#home">Home</a>
         <a href="#join">Join</a>
-        <a href="#features">Features</a>
+        <a href="#blog">News</a>
         <a href="#about">About</a>
     </div>
 </nav>
 
-<div class="hero" id="home">
+<header class="hero" id="home">
     <h1>2b2t<span>org</span></h1>
     <p>
-        The best alternative to 2b2t on Eaglercraft.
-        No rules, no limits, just pure anarchy.
-        Survive, build, raid and do whatever you want.
+        The ultimate 2b2t alternative on Eaglercraft.<br>
+        No rules. No limits. Pure anarchy.
     </p>
-    <a href="#join" class="join-button">Join the server</a>
-</div>
+    <a href="#join" class="button">Join the server</a>
+</header>
 
-<div class="container" id="join">
-    <h2>Join 2b2torg</h2>
-    <p class="description">
-        Ready to play? Copy the server address and connect using Eaglercraft.
-    </p>
+<section class="container" id="join">
+    <h2>Join the server</h2>
+    <p class="subtitle">Connect using Eaglercraft and start surviving.</p>
 
     <div class="server-box">
-        <h3>Server address</h3>
-        <div class="ip-container">
-            <div class="ip" id="serverIP">2b2torg.eagler.host</div>
-            <button onclick="copyIP()">Copy IP</button>
-        </div>
+        <p style="color:#888;font-size:13px">SERVER ADDRESS</p>
+        <div class="ip" id="serverIP">YOUR-SERVER-IP-HERE</div>
+        <button onclick="copyIP()">Copy IP</button>
+        <span id="copyStatus" style="color:#aaa;margin-left:10px;font-size:13px"></span>
     </div>
-</div>
+</section>
 
-<div class="container" id="features">
+<section class="container" id="blog">
+    <h2>Latest News</h2>
+    <p class="subtitle">Announcements, updates and server information.</p>
+
+    <div id="posts"></div>
+</section>
+
+<section class="container" id="features">
     <h2>Features</h2>
-    <p class="description">
-        A survival experience without unnecessary restrictions.
-    </p>
+    <p class="subtitle">A proper anarchy experience.</p>
 
-    <div class="features">
-
+    <div class="feature-grid">
         <div class="feature">
             <h3>True Anarchy</h3>
-            <p>No rules, no claims and no protected bases. You're on your own.</p>
+            <p>No rules, no claims and no protected bases.</p>
         </div>
 
         <div class="feature">
             <h3>Hopper Duping</h3>
-            <p>Hopper duplication is enabled. Use it to your advantage.</p>
+            <p>Hopper duplication is enabled.</p>
         </div>
 
         <div class="feature">
             <h3>PvP & Raiding</h3>
-            <p>Fight other players, raid bases and protect your own.</p>
+            <p>Fight, raid and defend your bases.</p>
         </div>
 
         <div class="feature">
             <h3>Griefing</h3>
-            <p>Build something impressive or destroy what others have built.</p>
+            <p>Build or destroy. Your choice.</p>
         </div>
-
-        <div class="feature">
-            <h3>Survival</h3>
-            <p>Explore the world, gather resources and make your mark.</p>
-        </div>
-
-        <div class="feature">
-            <h3>No Limits</h3>
-            <p>Play your own way. There are no restrictions on how you survive.</p>
-        </div>
-
     </div>
-</div>
+</section>
 
-<div class="container" id="about">
+<section class="container" id="about">
     <h2>About 2b2torg</h2>
-    <p class="about-text">
-        2b2torg is an Eaglercraft anarchy server inspired by the original
-        2b2t experience. The goal is simple: create a place where players
-        can enjoy unrestricted survival, PvP, raiding and everything
-        that comes with anarchy.
+    <p class="about">
+        2b2torg is an Eaglercraft anarchy server inspired by
+        the original 2b2t experience. Explore, fight, raid,
+        build and survive in a world without rules.
         <br><br>
         Trust nobody. Survive anything.
     </p>
-</div>
+</section>
 
 <footer>
     <p>2b2t<span>org</span> &copy; 2026. Not affiliated with Mojang or Microsoft.</p>
@@ -319,18 +310,44 @@ footer span {
 <script>
 function copyIP() {
     const ip = document.getElementById("serverIP").innerText;
+    const status = document.getElementById("copyStatus");
 
     navigator.clipboard.writeText(ip).then(() => {
-        const button = document.querySelector("button");
-        button.innerText = "Copied!";
-
-        setTimeout(() => {
-            button.innerText = "Copy IP";
-        }, 2000);
+        status.innerText = "Copied!";
+        setTimeout(() => status.innerText = "", 2000);
     }).catch(() => {
-        alert("Could not copy IP. Please copy it manually: " + ip);
+        status.innerText = "Copy manually: " + ip;
     });
 }
+
+function displayPosts() {
+    const container = document.getElementById("posts");
+
+    if (typeof posts === "undefined" || !Array.isArray(posts) || posts.length === 0) {
+        container.textContent = "No announcements yet.";
+        return;
+    }
+
+    [...posts].reverse().forEach(post => {
+        const article = document.createElement("article");
+        article.className = "blog-post";
+
+        const title = document.createElement("h3");
+        title.textContent = post.title;
+
+        const meta = document.createElement("div");
+        meta.className = "post-meta";
+        meta.textContent = `${post.category} | ${post.date}`;
+
+        const content = document.createElement("p");
+        content.textContent = post.content;
+
+        article.append(title, meta, content);
+        container.appendChild(article);
+    });
+}
+
+displayPosts();
 </script>
 
 </body>
