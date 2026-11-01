@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2b2torg - Eaglercraft Anarchy</title>
+<meta name="description" content="2b2torg is an anarchy survival server for Eaglercraft. No rules, no limits.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background: #191919;
+    border-bottom: 1px solid #333;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #c83232;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    padding: 110px 20px;
+    text-align: center;
+    background: #171717;
+    border-bottom: 1px solid #333;
+}
+
+.hero h1 {
+    font-size: 65px;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #c83232;
+}
+
+.hero p {
+    color: #999;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: auto;
+}
+
+.join-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: #b82b2b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.join-button:hover {
+    background: #922020;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 65px 20px;
+}
+
+h2 {
+    color: white;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.server-box {
+    background: #191919;
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.server-box h3 {
+    color: #999;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.ip-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ip {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+button {
+    background: #b82b2b;
+    border: none;
+    padding: 11px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background: #922020;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.feature {
+    background: #191919;
+    border: 1px solid #333;
+    padding: 23px;
+    border-radius: 4px;
+}
+
+.feature h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.about-text {
+    color: #999;
+    line-height: 1.9;
+}
+
+footer {
+    background: #191919;
+    border-top: 1px solid #333;
+    padding: 25px;
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+}
+
+footer span {
+    color: #c83232;
+}
+
+@media(max-width: 600px) {
+    nav {
+        padding: 18px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .ip-container {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">2b2t<span>org</span></div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#join">Join</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
+
+<div class="hero" id="home">
+    <h1>2b2t<span>org</span></h1>
+    <p>
+        The best alternative to 2b2t on Eaglercraft.
+        No rules, no limits, just pure anarchy.
+        Survive, build, raid and do whatever you want.
+    </p>
+    <a href="#join" class="join-button">Join the server</a>
+</div>
+
+<div class="container" id="join">
+    <h2>Join 2b2torg</h2>
+    <p class="description">
+        Ready to play? Copy the server address and connect using Eaglercraft.
+    </p>
+
+    <div class="server-box">
+        <h3>Server address</h3>
+        <div class="ip-container">
+            <div class="ip" id="serverIP">YOUR-SERVER-IP-HERE</div>
+            <button onclick="copyIP()">Copy IP</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="features">
+    <h2>Features</h2>
+    <p class="description">
+        A survival experience without unnecessary restrictions.
+    </p>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>True Anarchy</h3>
+            <p>No rules, no claims and no protected bases. You're on your own.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Hopper Duping</h3>
+            <p>Hopper duplication is enabled. Use it to your advantage.</p>
+        </div>
+
+        <div class="feature">
+            <h3>PvP & Raiding</h3>
+            <p>Fight other players, raid bases and protect your own.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Griefing</h3>
+            <p>Build something impressive or destroy what others have built.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Survival</h3>
+            <p>Explore the world, gather resources and make your mark.</p>
+        </div>
+
+        <div class="feature">
+            <h3>No Limits</h3>
+            <p>Play your own way. There are no restrictions on how you survive.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="about">
+    <h2>About 2b2torg</h2>
+    <p class="about-text">
+        2b2torg is an Eaglercraft anarchy server inspired by the original
+        2b2t experience. The goal is simple: create a place where players
+        can enjoy unrestricted survival, PvP, raiding and everything
+        that comes with anarchy.
+        <br><br>
+        Trust nobody. Survive anything.
+    </p>
+</div>
+
+<footer>
+    <p>2b2t<span>org</span> &copy; 2026. Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script>
+function copyIP() {
+    const ip = document.getElementById("serverIP").innerText;
+
+    navigator.clipboard.writeText(ip).then(() => {
+        const button = document.querySelector("button");
+        button.innerText = "Copied!";
+
+        setTimeout(() => {
+            button.innerText = "Copy IP";
+        }, 2000);
+    }).catch(() => {
+        alert("Could not copy IP. Please copy it manually: " + ip);
+    });
+}
+</script>
+
+</body>
+</html>
